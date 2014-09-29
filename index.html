@@ -1,12 +1,28 @@
 <!DOCTYPE>
     <html>
         <head>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
             <script>
-                function sayHi() {
+                /*function sayHi() {
                     alert("Hello, World");
                 }
-                sayHi();
-                sayHi();
+                v = (function() {
+                     sayHi();
+                     sayHi();
+                 });
+                 function perpetuate() {
+                     v();
+                     setTimeout(perpetuate, 10000);
+                 }
+                 setTimeout(perpetuate, 1000);*/
+                 $(function() {
+                   var cx = $("canvas")[0];
+                   //alert(cx);
+                   var retObj = (cx.getContext("2d"));
+                   retObj.fillStyle="#FF0000";
+                   retObj.fillRect(0,0, 640,480);
+                   //alert(cx.getContext("2d").drawRect(0,0, 100,100));
+                   });
             </script>
             <style>
                     div {
@@ -21,6 +37,7 @@
             <title>Hello World!</title>
         </head>
         <body>
+            <canvas width = "640" height = "480"></canvas>
             <h1>Hello World!</h1>
                 <div id = "a">
                     <div id = "b">Blah</div>
